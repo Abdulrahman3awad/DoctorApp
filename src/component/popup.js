@@ -24,6 +24,7 @@ function ProfilePopup({ onclick }) {
 function PrescriptionsFormPopup({ onclick }) {
   let userDataCo = useContext(userDataContext);
 
+  console.log(userDataCo?.userData);
   let [formPrescriptions, setFormPrescriptions] = useState({
     title: "no title",
     date: new Date().toLocaleString().split(",")[0],
@@ -37,14 +38,15 @@ function PrescriptionsFormPopup({ onclick }) {
       [e.target.name]: e.target.value,
     });
     setInputCounter((inputCounter += 1));
-    console.log(e);
   }
   function changeContextData() {
+    console.log(userDataCo?.userData);
+
     (inputCounter >= 4 &&
       userDataCo.setUserData({
         ...userDataCo.userData,
         prescriptions: [
-          ...userDataCo.userData.prescriptions,
+          ...userDataCo?.userData?.prescriptions,
           formPrescriptions,
         ],
       })) ||

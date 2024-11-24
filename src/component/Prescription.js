@@ -13,6 +13,7 @@ import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import { PrescriptionsFormPopup } from "./popup";
 import { useContext, useState } from "react";
 import { userDataContext } from "../App";
+import { DeletePrescription } from "./actions";
 
 const PrescriptionCard = () => {
   let userDataCo = useContext(userDataContext);
@@ -45,24 +46,28 @@ const PrescriptionCard = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {userDataCo.userData.prescriptions.map((row, index) => (
-              <TableRow key={index}>
-                <TableCell>
-                  <span className="prescription-icon">
-                    <InsertDriveFileIcon />
-                  </span>
-                  {row.title}
-                </TableCell>
-                <TableCell>{row.date}</TableCell>
-                <TableCell>
-                  {row.durationNum +
-                    " " +
-                    row.durationDes +
-                    (row.durationNum > 1 ? "s" : "")}
-                </TableCell>
-                <TableCell></TableCell>
-              </TableRow>
-            ))}
+            {userDataCo?.userData?.prescriptions
+              ?.reverse()
+              .map((row, index) => (
+                <TableRow key={index}>
+                  <TableCell>
+                    <span className="prescription-icon">
+                      <InsertDriveFileIcon />
+                    </span>
+                    {row.title}
+                  </TableCell>
+                  <TableCell>{row.date}</TableCell>
+                  <TableCell>
+                    {row.durationNum +
+                      " " +
+                      row.durationDes +
+                      (row.durationNum > 1 ? "s" : "")}
+                  </TableCell>
+                  <TableCell>
+                    <DeletePrescription keyRow={index} />
+                  </TableCell>
+                </TableRow>
+              ))}
           </TableBody>
         </Table>
       </TableContainer>
