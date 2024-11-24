@@ -1,0 +1,27 @@
+:root {
+  --pr: #fff;
+}
+.main-card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: var(--pr);
+  text-align: center;
+}
+.main-card > img {
+  width: 100px;
+  border-radius: 20px;
+  height: 100px;
+  object-fit: cover;
+}
+.main-card .card-text h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.main-card .card-text p {
+  color: #6a6a6a;
+}

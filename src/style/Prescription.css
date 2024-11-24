@@ -1,0 +1,57 @@
+.prescription-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+}
+
+.prescription-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.add-prescription-btn {
+  border: 1px dashed hsl(191.63deg 83.05% 23.14%) !important;
+  font-weight: bold;
+  margin: 10px 0px !important;
+  text-transform: none;
+  width: 100% !important;
+}
+
+.prescription-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.prescription-table th {
+  font-weight: bold;
+  background-color: #eafbea;
+  padding: 12px;
+  text-align: left;
+  color: #333;
+}
+
+.prescription-table td {
+  padding: 12px;
+  text-align: left;
+  line-height: 100%;
+}
+.prescription-table td span {
+  background-color: #fefbf4;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.prescription-table td span svg {
+  font-size: 18px;
+  position: relative;
+  top: 2px;
+  color: #f0ac37;
+}
+.prescription-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.prescription-icon {
+  margin-right: 10px;
+}

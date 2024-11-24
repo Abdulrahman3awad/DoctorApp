@@ -1,0 +1,108 @@
+.big-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup.prescriptions-form-popup {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.prescriptions-form-popup .popup-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #bebebe;
+  text-align: center;
+  width: 100%;
+}
+
+.prescriptions-form-popup .popup-label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.prescriptions-form-popup .popup-label-title {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.prescriptions-form-popup .popup-input,
+.prescriptions-form-popup .popup-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.prescriptions-form-popup .popup-select {
+  width: 50%;
+}
+
+.prescriptions-form-popup .duration-input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.prescriptions-form-popup .duration-input {
+  flex: 1;
+}
+
+.prescriptions-form-popup .popup-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: auto;
+}
+
+.prescriptions-form-popup .popup-button:hover {
+  background: #0056b3;
+}
+
+.profile-popup {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #00000063;
+  height: 200px;
+  position: fixed;
+  right: 10px;
+  top: 60px;
+  padding: 10px;
+}
+.profile-popup img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid hsl(191.63deg 83.05% 23.14%);
+}
+.profile-popup button {
+  background-color: hsl(191.63deg 83.05% 23.14%);
+}

@@ -1,0 +1,85 @@
+:root {
+  --color_1: hsl(191.63deg 83.05% 23.14%);
+  --color_2: rgb(109 204 165);
+  --color_3: rgb(140 186 196);
+}
+
+.navbar {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  position: fixed;
+  left: 0px;
+  /* top: 0px; */
+  background-color: var(--color_1);
+  height: 100vh;
+  z-index: 9999;
+}
+.navbar > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.navbar .navbar_logo img {
+  height: 60px;
+}
+.navbar > div.icons .icon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px solid transparent;
+  color: var(--color_3);
+  cursor: pointer;
+}
+.navbar > div.icons .icon svg {
+  font-size: 25px;
+}
+.navbar > div.icons .icon:hover {
+  border-left: 2px solid var(--color_2);
+  color: white;
+}
+.navbar > div.icons .icon:hover svg {
+  transform: scale(1.2);
+}
+@media only screen and (max-width: 560px) {
+  .navbar {
+    width: 100%;
+    height: 60px;
+    bottom: 0px !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar .navbar_logo {
+    display: none;
+  }
+  .navbar > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .navbar > div.icons .icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid transparent;
+  }
+  .navbar > div.icons .icon:hover {
+    border-bottom: 2px solid var(--color_2);
+    border-left: 2px solid transparent;
+  }
+  .navbar > div.icons .icon:hover span {
+    transform: scale(1.2);
+  }
+}

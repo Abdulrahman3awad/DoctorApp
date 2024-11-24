@@ -1,0 +1,32 @@
+:root {
+  --pr: #fff;
+}
+.information-card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--pr);
+}
+.information-card > table {
+  width: 100%;
+  font-size: 16px;
+}
+.information-card > h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.information-card table tr td {
+  padding: 5px 0px;
+}
+.information-card table tr td:nth-of-type(1) {
+  min-width: 100px;
+  width: 100px;
+  font-size: 14px;
+}
+
+.information-card table tr td:nth-of-type(2) {
+  font-size: 12px;
+  color: #6a6a6a;
+}

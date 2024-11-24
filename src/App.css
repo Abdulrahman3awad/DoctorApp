@@ -1,0 +1,37 @@
+@import url(./style/header.css);
+@import url(./style/navbar.css);
+@import url(./style/userPage.css);
+@import url(./style/mainCardUser.css);
+@import url(./style/informationCardUser.css);
+@import url(./style/vitalsCard.css);
+@import url(./style/report.css);
+@import url(./style/popup.css);
+@import url(./style/Prescription.css);
+* {
+  transition: 0s;
+}
+
+.dark .user-page,
+.dark .popup,
+.dark .prescription-card table tr:nth-child(even),
+.dark .prescription-card table tr:nth-child(even) td,
+.dark .prescription-card table th {
+  background-color: #181818 !important;
+  color: white !important;
+}
+.dark .prescription-card table th {
+  background-color: #2c462c !important;
+  color: white !important;
+}
+.dark div.vitals-card,
+.dark div.main-card,
+.dark div.reports,
+.dark div.reports .report,
+.dark .navbar,
+.dark .information-card,
+.dark .prescription-card,
+.dark .prescription-card table tr:nth-child(odd),
+.dark .prescription-card table tr:nth-child(odd) td {
+  background-color: #000000 !important;
+  color: white !important;
+}

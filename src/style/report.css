@@ -1,0 +1,40 @@
+.report {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.report .icon {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.report:nth-of-type(1) .icon {
+  color: #09576d;
+  background-color: #f3f7f8;
+}
+.report:nth-of-type(2) .icon {
+  color: #f0ac37;
+  background-color: #fefbf4;
+}
+.report:nth-of-type(3) .icon {
+  color: #d66256;
+  background-color: #fdf8f5;
+}
+
+.report .content h3 {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.report .content p {
+  font-size: 14px;
+  color: #888;
+}
