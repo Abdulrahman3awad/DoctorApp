@@ -21,36 +21,38 @@ function ProfilePopup({ onclick }) {
   );
 }
 
-function PrescriptionsFormPopup({ onclick }) {
+function PrescriptionsFormPopup({ onclick, elementEdit }) {
   let userDataCo = useContext(userDataContext);
+  let dataEditing = elementEdit
+    ? userDataCo.userData.prescriptions[elementEdit]
+    : null;
 
-  console.log(userDataCo?.userData);
   let [formPrescriptions, setFormPrescriptions] = useState({
-    title: "no title",
-    date: new Date().toLocaleString().split(",")[0],
-    durationNum: "-",
-    durationDes: "-",
+    title: dataEditing?.title || "",
+    date: dataEditing?.date || new Date().toLocaleString().split(",")[0],
+    durationNum: dataEditing?.durationNum || "",
+    durationDes: dataEditing?.durationDes || "",
   });
-  let [inputCounter, setInputCounter] = useState(0);
   function submitData(e) {
     setFormPrescriptions({
       ...formPrescriptions,
       [e.target.name]: e.target.value,
     });
-    setInputCounter((inputCounter += 1));
   }
   function changeContextData() {
-    console.log(userDataCo?.userData);
-
-    (inputCounter >= 4 &&
+    if (
+      !Object.values(formPrescriptions).includes(null) &&
+      !Object.values(formPrescriptions).includes("")
+    ) {
       userDataCo.setUserData({
         ...userDataCo.userData,
         prescriptions: [
           ...userDataCo?.userData?.prescriptions,
           formPrescriptions,
         ],
-      })) ||
+      });
       onclick();
+    }
   }
   return (
     <div className="big-popup" onClick={onclick}>
@@ -65,6 +67,7 @@ function PrescriptionsFormPopup({ onclick }) {
             name="title"
             onChange={submitData}
             placeholder="Enter title..."
+            value={formPrescriptions.title}
           />
         </label>
 
@@ -76,6 +79,7 @@ function PrescriptionsFormPopup({ onclick }) {
             name="date"
             onChange={submitData}
             placeholder="Enter date..."
+            value={formPrescriptions.date}
           />
         </label>
 
@@ -88,12 +92,13 @@ function PrescriptionsFormPopup({ onclick }) {
               name="durationNum"
               onChange={submitData}
               placeholder="Enter duration..."
+              value={formPrescriptions.durationNum}
             />
             <select
               className="popup-select"
               name="durationDes"
               onChange={submitData}
-              defaultValue="--"
+              value={formPrescriptions.durationDes}
             >
               <option disabled selected value="--">
                 select duration

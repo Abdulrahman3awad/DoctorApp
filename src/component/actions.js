@@ -1,4 +1,5 @@
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import EditIcon from "@mui/icons-material/Edit";
 import { useContext } from "react";
 import { userDataContext } from "../App";
 function DeletePrescription({ keyRow }) {
@@ -19,4 +20,13 @@ function DeletePrescription({ keyRow }) {
     </div>
   );
 }
-export { DeletePrescription };
+
+function EditPrescription({ keyRow, click }) {
+  let userDataCo = useContext(userDataContext);
+  return (
+    <div className="edit-icon icon" onClick={click}>
+      <EditIcon />
+    </div>
+  );
+}
+export { DeletePrescription, EditPrescription };
