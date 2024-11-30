@@ -4,8 +4,8 @@ import { useContext } from "react";
 import { userDataContext } from "../App";
 function DeletePrescription({ keyRow }) {
   let userDataCo = useContext(userDataContext);
-  let deleteItem = () => {
-    console.log(userDataCo.userData.prescriptions);
+  let deleteItem = (e) => {
+    e.stopPropagation();
 
     userDataCo.setUserData({
       ...userDataCo.userData,

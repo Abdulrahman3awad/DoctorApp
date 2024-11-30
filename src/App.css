@@ -35,3 +35,10 @@
   background-color: #000000 !important;
   color: white !important;
 }
+.page {
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  height: 100vh;
+  line-height: 100vh;
+}

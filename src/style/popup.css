@@ -106,3 +106,16 @@
 .profile-popup button {
   background-color: hsl(191.63deg 83.05% 23.14%);
 }
+
+.popup.more-prescription {
+  width: 80%;
+  height: 90vh;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

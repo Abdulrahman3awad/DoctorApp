@@ -33,7 +33,102 @@ const user = {
     { testName: "Eye Fluorescein Test", date: "12th February 2020" },
   ],
   prescriptions: [
-    { date: "2024-11-29", durationDes: "week", durationNum: "2", title: "aa" },
+    {
+      date: "2024-11-29",
+      durationDes: "week",
+      durationNum: "2",
+      title: "aa",
+      medications: [
+        {
+          name: "x",
+          repetition: 3,
+          time: "after eating",
+          alternative: "y",
+          notes: "pla pla pla",
+          reRepetition: 2,
+        },
+        {
+          name: "z",
+          repetition: 1,
+          time: "morning",
+          alternative: "b",
+          notes: "pla pla pla",
+          reRepetition: 1,
+        },
+      ],
+    },
+    {
+      date: "2024-11-29",
+      durationDes: "week",
+      durationNum: "2",
+      title: "aa",
+      medications: [
+        {
+          name: "x",
+          repetition: 3,
+          time: "after eating",
+          alternative: "y",
+          notes: "pla pla pla",
+          reRepetition: 2,
+        },
+        {
+          name: "z",
+          repetition: 1,
+          time: "morning",
+          alternative: "b",
+          notes: "pla pla pla",
+          reRepetition: 1,
+        },
+      ],
+    },
+    {
+      date: "2024-11-29",
+      durationDes: "week",
+      durationNum: "2",
+      title: "aa",
+      medications: [
+        {
+          name: "x",
+          repetition: 3,
+          time: "after eating",
+          alternative: "y",
+          notes: "pla pla pla",
+          reRepetition: 2,
+        },
+        {
+          name: "z",
+          repetition: 1,
+          time: "morning",
+          alternative: "b",
+          notes: "pla pla pla",
+          reRepetition: 1,
+        },
+      ],
+    },
+    {
+      date: "2024-11-29",
+      durationDes: "week",
+      durationNum: "2",
+      title: "aa",
+      medications: [
+        {
+          name: "x",
+          repetition: 3,
+          time: "after eating",
+          alternative: "y",
+          notes: "pla pla pla",
+          reRepetition: 2,
+        },
+        {
+          name: "z",
+          repetition: 1,
+          time: "morning",
+          alternative: "b",
+          notes: "pla pla pla",
+          reRepetition: 1,
+        },
+      ],
+    },
   ],
 };
 

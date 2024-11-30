@@ -41,13 +41,18 @@
 .navbar > div.icons .icon svg {
   font-size: 25px;
 }
-.navbar > div.icons .icon:hover {
-  border-left: 2px solid var(--color_2);
-  color: white;
-}
 .navbar > div.icons .icon:hover svg {
   transform: scale(1.2);
 }
+
+.navbar > div.icons .icon.check {
+  border-left: 2px solid var(--color_2);
+  color: white;
+}
+.navbar > div.icons .icon.check svg {
+  transform: scale(1.2);
+}
+
 @media only screen and (max-width: 560px) {
   .navbar {
     width: 100%;
@@ -75,11 +80,14 @@
     justify-content: center;
     border-bottom: 2px solid transparent;
   }
-  .navbar > div.icons .icon:hover {
+  .navbar > div.icons .icon:hover span {
+    transform: scale(1.2);
+  }
+  .navbar > div.icons .icon.check {
     border-bottom: 2px solid var(--color_2);
     border-left: 2px solid transparent;
   }
-  .navbar > div.icons .icon:hover span {
+  .navbar > div.icons .icon.check svg {
     transform: scale(1.2);
   }
 }

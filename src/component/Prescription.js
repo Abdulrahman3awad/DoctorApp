@@ -10,7 +10,7 @@ import {
   Paper,
 } from "@mui/material";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
-import { PrescriptionsFormPopup } from "./popup";
+import { PrescriptionsFormPopup, ShowMorePrescription } from "./popup";
 import { useContext, useState } from "react";
 import { userDataContext } from "../App";
 import { DeletePrescription, EditPrescription } from "./actions";
@@ -19,11 +19,16 @@ const PrescriptionCard = () => {
   let userDataCo = useContext(userDataContext);
   let [rowEdit, setRowEdit] = useState(null);
   let [formPopup, setFormPopup] = useState(false);
+  let [morePopup, setMorePopup] = useState(false);
 
+  function showMorePopup() {
+    !morePopup ? setMorePopup(true) : setMorePopup(false);
+  }
   function showFormPopup() {
     !formPopup ? setFormPopup(true) : setFormPopup(false);
   }
   let changeRowEdit = (e) => {
+    e.stopPropagation();
     setRowEdit(e.target.closest("tr").id.split("-")[1]);
     showFormPopup();
   };
@@ -57,7 +62,7 @@ const PrescriptionCard = () => {
           </TableHead>
           <TableBody>
             {userDataCo?.userData?.prescriptions?.map((row, index) => (
-              <TableRow id={"_id-" + index} key={index}>
+              <TableRow id={"_id-" + index} key={index} onClick={showMorePopup}>
                 <TableCell>
                   <span className="prescription-icon">
                     <InsertDriveFileIcon />
@@ -83,8 +88,9 @@ const PrescriptionCard = () => {
         </Table>
       </TableContainer>
       {formPopup && (
-        <PrescriptionsFormPopup elementEdit={rowEdit} onclick={showFormPopup} />
+        <PrescriptionsFormPopup elementEdit={rowEdit} close={showFormPopup} />
       )}
+      {morePopup && <ShowMorePrescription close={showMorePopup} />}
     </div>
   );
 };
